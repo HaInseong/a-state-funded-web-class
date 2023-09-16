@@ -1,0 +1,116 @@
+@charset "UTF-8";
+
+* {
+	margin: 0;
+}
+
+header {
+	text-align: center;
+	height: 200px;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	background-image: linear-gradient(to bottom, lightskyblue, gold)
+}
+
+header h1 {
+	text-shadow: 4px 4px 6px green, 10px 10px 20px red;
+	line-height: 100px;
+}
+
+nav a {
+	text-decoration: none;
+	margin-right: 80px;
+	margin-left: 80px;
+}
+
+section {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+article {
+	border: 1px olive dotted;
+	border-radius: 10px;
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 20px;
+}
+
+p {
+	text-align: center;
+}
+
+.introH1 {
+	color: tomato;
+	margin-left: 20px;
+}
+
+.introUl {
+	margin-left: 20px;
+}
+
+.yearsBook {
+	color: mediumturquoise;
+	margin-left: 20px;
+}
+
+.bookTable {
+	margin-left: 20px;
+}
+
+.introBook table tr th:nth-of-type(1) {
+	background-color: green;
+}
+
+.myPlace {
+	margin-right: 20px;
+	margin-left: 20px;
+}
+
+footer {
+	background-color: grey;
+	text-align: center;
+	line-height: 80px;
+}
+
+.myPlace:hover {
+	opacity: 0.5;
+}
+
+a:hover {
+	font-weight: bold;
+}
+
+aside {
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+iframe {
+	width: 100%;
+}
+
+.myPlace h2 {
+	color: goldenrod;
+}
+
+.h2Content {
+	color: hotpink;
+}
+
+.tableTitle {
+	background-color: mediumturquoise;
+}
+
+.tableGenre {
+	background-color: mediumturquoise;
+}
+
+img {
+	width: 80%;
+	display: block;
+	margin: auto;
+}

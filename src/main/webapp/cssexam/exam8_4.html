@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CSS 학습</title>
+<style>
+    * {
+		/* body태그 마진 0으로 초기화 */
+		margin : 0
+	}
+
+	header {
+		width : 100%;
+		height : 100px;
+		background-color : yellow;
+	}
+	nav {
+		width : 30%; /* 전체 너비의 30프로 사용하겠다는 의미 */
+		height : 500px;
+		float : left; /* float 속성을 이용해서 왼쪽에 띄워라는 의미 */
+		background-color : pink;
+	}
+	section {
+		width : 70%;
+		height : 500px;
+		float : right; /* float 속성을 이용해서 오른쪽에 띄워라는 의미 */
+		background-color : skyblue;
+	}
+	article {
+		width : 80%; /* article 태그를 담고 있는 부모 태그의 80%를 의미 */
+		height : 200px;
+		background-color : magenta;
+		margin-left : auto;
+		margin-right : auto;
+	}
+	footer {
+		width : 100%;
+		height : 50px;		
+		clear : both; /* 이전에 설정된 float 속성을 여기서는 적용하지 말라는 의미, 이 속성을 주지 않으면 float 속성으로 띄운 공간 안으로 들어가버림 */
+		background-color : lightgray;
+	}
+
+</style>
+</head>
+<body>
+	<header>
+		<h1>레이아웃 나누기</h1>
+		<em>오늘은 즐거운 금요일</em>
+	</header>
+	<nav>
+		<strong>고르세용</strong><br>
+		<mark>먹고싶은거</mark>
+		<ul>
+			<li>메뉴1</li>
+			<li>메뉴2</li>
+			<li>메뉴3</li>
+			<li>메뉴4</li>
+		</ul>
+	</nav>
+	<section>
+		<article>
+			<h2>제목1</h2>
+			<p>내용1</p>
+		</article>
+		<article>
+			<h2>제목2</h2>
+			<p>내용2</p>
+		</article>
+	</section>
+	<footer>
+		<h3>홈페이지 정보(바닥 글)</h3>
+	</footer>
+</body>
+</html>
