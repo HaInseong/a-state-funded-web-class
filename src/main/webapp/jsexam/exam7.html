@@ -9,11 +9,11 @@
 <hr>
 <p>실행 결과는 자바스크립트 콘솔에서 확인하세요~~</p>
 <script>
-for(let i=0; i <10; i++){
+for(let i=0; i <10; i++){ //let으로 선언하는게 자바와 다름, let으로 선언하면 for문에서만 사용 가능한 지역변수, var로 선언하면 전체 사용 가능한 전역변수 된다.
 	var rand = Math.random();// 0.0<= rand < 1.0
 	console.log(rand);
 	console.log(rand*10);
-	console.log(Math.floor(rand*10));
+	console.log(Math.floor(rand*10)); //.floor = 소수점 이하 날림
 	console.log("-----------------------");
 }
 //document.write(i);

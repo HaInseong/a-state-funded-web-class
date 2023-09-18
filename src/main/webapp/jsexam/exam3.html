@@ -14,11 +14,11 @@
 	document.write("<h2>"+ typeof "abc" +"</h2>");
 	document.write("<h2>"+ typeof '100' +"</h2>");
 	document.write("<h2>"+ typeof true +"</h2>");
-	document.write("<h2>"+ typeof undefined +"</h2>");
-	document.write("<h2>"+ typeof null +"</h2>");
-	document.write("<h2>"+ typeof function() {} +"</h2>");
-	document.write("<h2>"+ typeof {} +"</h2>");
-	document.write("<h2>"+ typeof [] +"</h2>");
+	document.write("<h2>"+ typeof undefined +"</h2>"); //undefined 값이면서 타입명이다.
+	document.write("<h2>"+ typeof null +"</h2>"); //object 타입
+	document.write("<h2>"+ typeof function() {} +"</h2>"); //function(매개변수) {수행코드} 자바스크립트 함수, function명도 하나의 타입으로 처리 됨.
+	document.write("<h2>"+ typeof {} +"</h2>"); //object 타입
+	document.write("<h2>"+ typeof [] +"</h2>"); //object 타입
 </script>
 </body>
 </html>

@@ -5,7 +5,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>함수 정의와 활용(1)-선언적 함수 정의</h1>
+<h1>함수 정의와 활용(1)-선언적(명시적) 함수 정의</h1>
 <hr>
 <script>
 function f1() {
@@ -18,14 +18,14 @@ f1();
 f2(10,20);
 document.write('<hr>');
 var result1 = f1();
-var result2 = f2(100,200);
+var result2 = f2(100,200); //리턴문을 안썼다면 자동으로 undefined 리턴됨
 document.write('result1 : '+result1+' result2 : '+result2);
 if(result1 == undefined) {//if(!result1) {
 	document.write('<br>리턴값이 없군요!!');
 }
 document.write('<hr>');
-f1(100);
-f2(100);
+f1(100); //매개변수 정의하지 않은 함수에 매개변수를 전달하면 에러가 나는게 아니라 무시됨.
+f2(100); //100 + undefined = NaN 결과 출력
 
 </script>
 

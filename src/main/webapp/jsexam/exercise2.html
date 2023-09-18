@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+span {
+	color: red;
+}
+</style>
+</head>
+<body>
+	<script>
+		var num;
+
+		do {
+			num = window.prompt("1~9사이의 숫자를 한 개 입력하세요."); // string형으로 전달됨
+			num = Number(num);
+		} while (isNaN(num) || num == '' || num == null || num == 0 || num > 9)
+		{
+			document.write("<span>" + num + "단 입니다.</span><br><hr>");
+
+			for (var i = 1; i < 10; i++) {
+				var result = num * i;
+				document.write(num + " x " + i + " = " + result + "<br>");
+			}
+		}
+	</script>
+</body>
+</html>

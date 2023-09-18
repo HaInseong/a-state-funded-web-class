@@ -10,9 +10,9 @@
 <script>
 	document.write("<ul>");
 	var v1;
-	document.write("<li>"+ v1 +"</li>");
-	document.write("<li>"+ typeof v1 +"</li>");
-	document.write("<li>"+ (v1+10) +"</li>");
+	document.write("<li>"+ v1 +"</li>"); //undefined라는 값이 출력되는 것
+	document.write("<li>"+ typeof v1 +"</li>");//undefined라는 자료형이 출력 되는 것
+	document.write("<li>"+ (v1+10) +"</li>"); //값이 없는 undefined와 연산하면 NaN(Not a Number)값이 나오게 된다. /Inf(infinite 무한의)
 	v1 = 100;
 	document.write("<li>"+ v1 +"</li>");
 	document.write("<li>"+ typeof v1 +"</li>");
@@ -20,12 +20,12 @@
 	v1 = true;
 	document.write("<li>"+ v1 +"</li>");
 	document.write("<li>"+ typeof v1 +"</li>");
-	document.write("<li>"+ (v1+10) +"</li>");
+	document.write("<li>"+ (v1+10) +"</li>"); //true는 1
 	v1 = "가나다";
 	document.write("<li>"+ v1 +"</li>");	
 	document.write("<li>"+ typeof v1 +"</li>");
 	document.write("<li>"+ (v1+10) +"</li>");
-	v1 = new Object();
+	v1 = new Object(); // {  }, 비어있는 객체 생성(toString같은 기본 멤버만 있음)
 	document.write("<li>"+ v1 +"</li>");	
 	document.write("<li>"+ typeof v1 +"</li>");
 	document.write("<li>"+ (v1+10) +"</li>");

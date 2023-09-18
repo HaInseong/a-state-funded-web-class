@@ -8,18 +8,18 @@
 <h1>JavaScript의 변수 선언과 활용(1)</h1>
 <script>
 	document.writeln(123);
-	document.writeln(v1+"<br>");	// 오류 발생
+	document.writeln(v1+"<br>");	// 오류 발생, 오류 발생하면 해당 script는 종료해버린다.
 	document.writeln(456);
 </script>
 <hr>
 <script>
-	var v1;
-	document.writeln(v1+"<br>");
+	var v1; //변수 선언 예약어 = let, const = 선언 후 어떤 값이든 넣을 수 있다.
+	document.writeln(v1+"<br>"); //선언은 했지만 값을 초기화 하지 않았다면 undefined
 	v1 = 100;
 	document.writeln(v1+"<br>");
 	v1 = '가나다';
 	document.writeln(v1+"<br>");	
-	var v1 = true;
+	var v1 = true; //var의 단점, 똑같은 이름으로 변수를 여러개 선언해도 에러가 나지 않는다. = 해결하기 위해서 나온게 let
 	document.writeln(v1+"<br>");	
 	v1 = 123;
 	document.writeln(v1+45+"<br>");	

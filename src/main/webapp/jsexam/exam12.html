@@ -10,21 +10,21 @@
 <script src="util.js"></script>
 <script>
 var num1 = 100;
-let num2 = 200;
-const num3 = 300;
+let num2 = 200; //let: 같은 이름 변수 선언 못함, 블록 스코프 지원
+const num3 = 300; //const: 상수 만들 때 사용
 writeColor("num1 : " + num1, "h1", "red");
 writeColor("num2 : " + num2, "h1", "green");
 writeColor("num3 : " + num3, "h1", "blue");
 hr();
 num1 = '가';
 num2 = '나';
-//num3 = '다';
+//num3 = '다'; 상수는 한 번 정해진 값에서 바뀌지 못하므로 에러남
 writeColor("num1 : " + num1, "h2", "red");
 writeColor("num2 : " + num2, "h2", "green");
 writeColor("num3 : " + num3, "h2", "blue");
 hr();
 var num1 = 3.5;
-//let num2 = 4.7;
+//let num2 = 4.7; let은 중복된 이름의 변수 선언 못함
 //const num3 = 5.3;
 writeColor("num1 : " + num1, "h3", "red");
 writeColor("num2 : " + num2, "h3", "green");
@@ -32,8 +32,8 @@ writeColor("num3 : " + num3, "h3", "blue");
 hr();
 function f1(n) {
     if (n == '올라프') {
-        var name1 = '둘리';
-        let name2 = '고길동';
+        var name1 = '둘리'; /* var는 f1 함수의 지역변수, 블록 스코프를 반영하지 않음 */
+        let name2 = '고길동'; //let은 if문 블록 안에서만 사용 가능한 블록 스코프를 반영
         writeColor(name1 +" : " + name2, "h1", "red");
     }
     writeColor(name1, "h1", "blue");
