@@ -17,14 +17,12 @@
 				writeColor("결과값이 없어요!!", "h1", "skyblue");
 				return;
 			}
-			
 			var sum = 0;
 			for (var i = 0; i <= randNum; i++) {
 				sum += i;
 			}
 			write("호출 결과값: " + sum, "h2");
 		}
-		
  		for (var i = 0; i < 5; i++) {
 			var randNum = Math.floor(Math.random() * 6);
 			sum(randNum);

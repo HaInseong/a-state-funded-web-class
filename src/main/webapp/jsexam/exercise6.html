@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script src="util.js"></script>
+	<script>
+		function getKorDay(year, momth, day) {
+			if (isNaN(year) || isNaN(month) || isNaN(day)) { //isNaN() 메소드: 숫자가 아니면 true 리턴, null문자를 걸러내지 못하고 true여야하는게 false로 반환되는 특징이 있으므로 typeof Number가 더 정확하게 처리 함.
+				return undefined; //undefined생략해도 자동으로 리턴됨.
+			}
+			const date = new Date(year, month - 1, day);
+			const dayOfWeek = date.getDay();
+
+			switch (dayOfWeek) {
+			case 0:
+				return "일요일";
+			case 1:
+				return "월요일";
+			case 2:
+				return "화요일";
+			case 3:
+				return "수요일";
+			case 4:
+				return "목요일";
+			case 5:
+				return "금요일";
+			case 6:
+				return "토요일";
+			default:
+				return undefined;
+			}
+		}
+		let year = prompt("연도를 입력하세요");
+		let month = prompt("달을 입력하세요");
+		let day = prompt("일자를 입력하세요");
+
+		const result = getKorDay(year, month, day);
+		if (result == undefined) {
+			writeColor("결과 없음", "h1", "red");
+		} else {
+			writeColor(year + "년 " + month + "월 " + day + "일은 " + result + "입니다.", "h1", "blue"); //공백 2개이상은 &nbsp 써야함, 아무리 공백 여러개 주더라도 1개로만 인식된다.
+		}
+	</script>
+</body>
+</html>

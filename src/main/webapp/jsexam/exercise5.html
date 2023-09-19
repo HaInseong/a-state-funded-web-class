@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+h1 {
+	color: blue;
+}
+
+h2 {
+	color: red;
+}
+
+ul {
+	list-style-type: circle;
+}
+</style>
+</head>
+<body>
+	<script src="util.js"></script>
+	<script>
+		write("자바스크립트 실습(5)", "h1")
+
+		let array = [ 10, 5, 7, 21, 4, 8, 18 ];
+
+		function getMaxValue() {
+			array.sort(function(a, b) {
+				return b - a;
+			})
+			return array[0];
+		}
+		function getMinValue() {
+			array.sort(function(a, b) {
+				return a - b;
+			})
+			return array[0];
+		}
+		function getSum() {
+			let sum = 0;
+			for ( let i in array) {
+				sum += array[i];
+			}
+			return sum;
+		}
+		function getCountOddNum() {
+			let count = 0;
+			for ( let i in array) {
+				if (array[i] % 2 != 0) {
+					count++;
+				}
+			}
+			return count;
+		}
+		function getCountEvenNum() {
+			let count = 0;
+			for ( let i in array) {
+				if (array[i] % 2 == 0) {
+					count++;
+				}
+			}
+			return count;
+		}
+
+		write("모든 원소의 합 : " + getSum(array), "h2");
+		document.write("<ul>");
+		write("최대값 : " + getMaxValue(array), "li");
+		write("최소값 : " + getMinValue(array), "li");
+		write("짝수의 갯수 : " + getCountEvenNum(array), "li");
+		write("홀수의 갯수 : " + getCountOddNum(array), "li");
+		document.write("</ul>");
+	</script>
+
+</body>
+</html>

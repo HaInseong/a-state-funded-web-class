@@ -11,7 +11,7 @@
 <script>
 var d = new Date();
 writeColor(d, "h2", "red");
-writeColor(d.toLocaleString(), "h2", "blue");
+writeColor(d.toLocaleString(), "h2", "blue"); //우리나라 관습을 적용한 시간이 나옴
 writeColor(d.getFullYear(), "h2", "green");
 writeColor(d.getMonth(), "h2", "magenta");
 writeColor(d.getDate(), "h2", "orange"); // 0 : 일요일
@@ -19,7 +19,7 @@ writeColor(d.getDay(), "h2", "magenta");
 writeColor(d.getTime(), "h2", "brown");
 writeColor(Date.now(), "h2", "red");
 hr();
-var d1 = new Date(2022, 7, 15);
+var d1 = new Date(2022, 9, 15); //자바와 마찬가지로 자바스크립트도 월은 1작게 처리해야 함.
 writeColor(d1, "h2", "magenta");
 writeColor(d1.getFullYear(), "h2", "green");
 writeColor(d1.getDate(), "h2", "orange");

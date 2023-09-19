@@ -13,18 +13,16 @@
 		num = prompt("숫자를 입력하세요:");
 		Number(num);
 		console.log(num);
-		for (var i = 0; i <= num; i++) {
-			sum += i;
-		}
 		if (num == null || num == "") {
 			write("비어있는 입력", "h3")
 		} else if (isNaN(num)) {
 			write("숫자가 아닙니다", "h3")
-
 		} else {
+			for (var i = 0; i <= num; i++) {
+				sum += i;
+			}
 			write("1부터 " + num + "의 까지의 값의 합은" + sum + "입니다", "h2");
 		}
 	</script>
-
 </body>
 </html>
