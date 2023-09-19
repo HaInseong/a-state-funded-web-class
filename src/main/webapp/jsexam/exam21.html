@@ -7,12 +7,12 @@
 <body>
 <script>
 function outerFunction() {
-    return function () {
+    return function () { //return값이 함수인 경우
         document.write('<H1>Hello World .. !</h1>');
     };
 }
-outerFunction( )( );
-var result = outerFunction( );
+outerFunction( )( ); //두번째 소괄호는 리턴되는 함수를 바로 호출하는 구현문법임.
+var result = outerFunction( ); //함수를 담게되는 변수는 함수의 이름을 대신한다.
 result( );
 result( );
 </script>
