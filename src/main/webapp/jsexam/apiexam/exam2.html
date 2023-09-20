@@ -6,7 +6,7 @@
 </head>
 <body>
 <form name="fm">
-	<select id="choice" onchange="go();">
+	<select id="choice" onchange="go();"> <!-- 선택된 항목에서 다른 항목을 선택하면 go()함수를 호출하시오. -->
 		<option value="">---관심있는 기술을 선택해 주세요---</option>
 		<option value="https://www.w3schools.com/js/default.asp">Learn JavaScript</option>
 		<option value="https://www.w3schools.com/js/js_htmldom.asp">Learn HTML DOM</option>
@@ -14,10 +14,11 @@
 		<option value="https://www.w3schools.com/js/js_json_intro.asp">Learn JSON</option>
 	</select>
 </form>
-<script>
+<script> //HTML이 가지고 있지 않은 기능을 JS로 추가할 수 있다.
 function go(){	
-	location.href = document.getElementById("choice").value;
+	location.href = document.getElementById("choice").value; //location의 href안에 choice라는 아이디 속성을 가진 태그를 가진 객체를 찾아서 해당 객체의 value 값을 대입하라.
 	//location.href = document.querySelector("#choice").value;
+	//location.href = "http://www.naver.com/";
 }
 </script>
 </body>

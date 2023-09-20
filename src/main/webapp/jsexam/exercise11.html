@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+@font-face {
+	font-family: 'RixMomsBlanketR';
+	src:
+		url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/RixMomsBlanketR.woff2')
+		format('woff2');
+	font-weight: normal;
+	font-style: normal;
+}
+
+* {
+	font-family: 'RixMomsBlanketR';
+}
+
+a {
+	text-decoration: none;
+	font-size: 2em;
+	margin: 10px;
+}
+</style>
+</head>
+<body>
+	<h1>DOM 프로그래밍</h1>
+	<hr>
+	<script>
+		function go() {
+			const answer = window.confirm("정말 이동 할겨?");
+
+			if (answer) {
+				let randNum = Math.floor(Math.random() * 3) + 1;
+				if (randNum === 1) {
+					window.open("http://www.daum.net");
+				} else if (randNum === 2) {
+					window.open("http://www.naver.com/");
+				} else if (randNum === 3) {
+					window.open("http://www.google.com");
+				}
+			} else
+				window.location.href = "../first.html";
+		}
+
+		go();
+	</script>
+</body>
+</html>

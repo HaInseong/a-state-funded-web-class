@@ -10,7 +10,7 @@
       const x=document.getElementById("demo");
 	  function getLocation() {
          if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(showPosition,showError);
+            navigator.geolocation.getCurrentPosition(showPosition,showError); //위치 정보 추출 메서드, gps, 네트워크 순으로 찾아냄
          }
          else{x.innerHTML=" 이 브라우저는 geolocation을 지원하지 않습니다.";}
       }

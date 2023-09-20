@@ -10,7 +10,7 @@
 	const height = screen.height;
 	child.moveTo(0, 0);
 	child.resizeTo(width, height);   
-	window.setInterval(function () {
+	window.setInterval(function () { //2초마다 function을 호출하라
     	child.resizeBy(-20, -20);
     	child.moveBy(10, 10);
 	}, 2000);  

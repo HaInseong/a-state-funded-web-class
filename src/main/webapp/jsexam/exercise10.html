@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script src="util.js"></script>
+	<script>
+		function DayInfo(name, y, m, d) {
+			this.name = name;
+			this.y = y;
+			this.m = m;
+			this.d = d;
+		}
+
+		DayInfo.prototype.getTotalDates = function() {
+			const nowDate = new Date();
+			const inputDate = new Date(this.y, this.m - 1, this.d); // 월은 0부터 시작하므로 -1 
+
+			const diffMil = nowDate - inputDate;
+			const diffDays = Math.floor(diffMil / (1000 * 60 * 60 * 24));
+
+			return this.name + "님은 태어난지 " + diffDays + "일 되었어요.";
+		};
+		DayInfo.prototype.getKorDay = function() {
+			const days = [ "일", "월", "화", "수", "목", "금", "토" ];
+			const inputDate = new Date(this.y, this.m - 1, this.d); // 월은 0부터 시작하므로 -1 
+			const dayOfWeek = days[inputDate.getDay()];
+
+			return this.name + "님은 " + dayOfWeek + "요일에 태어났어요.";
+		};
+
+		const ary = [];
+		ary.push(new DayInfo("인성", 1991, 1, 19));
+		ary.push(new DayInfo("승완", 1993, 7, 22));
+		ary.push(new DayInfo("승현", 2023, 09, 9));
+
+		for ( let key in ary) {
+			writeColor(ary[key].getTotalDates(), "h3", "tomato");
+			writeColor(ary[key].getKorDay(), "h3", "black");
+			hr();
+		}
+	</script>
+
+
+</body>
+</html>

@@ -22,7 +22,7 @@ const persons = [
     new Person("고길동",78,"서울")
 ];
 const plist = persons.map(function (p) {
-    return `${p.name}(${p.point})`;
+    return `${p.name}(${p.point})`; //ES6에서 추가: 템플릿리터럴, 템플릿 리터럴 사용하지 않으면 p.name+"("+p.point+")" 이렇게 문자열 결합해서 원하는 형식을 만들어야 함.
   });
 writeColor(plist, 'h3', 'blue');
 
