@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script src="util.js"></script>
+	<script>
+		function printH1(content) {
+			write(content, "h1");
+		}
+		function printH4(content) {
+			write(content, "h4");
+		}
+
+		/*	
+		 printH1("어렵네");
+		 printH4("어렵네2"); 
+		 */
+
+		function apply(arr, func) {
+			/* alert(typeof func); */
+			if (!Array.isArray(arr) || typeof func !== 'function') { //typeof의 함수 타입은 문자열로 반환된다.
+				console.error("아규먼트 오류");
+				return false;
+			}
+
+			/* for (let key of arr) {
+				func(key);
+			} */
+			for (let key in arr) {
+				func(arr[key]);
+			}
+			return true;
+		}
+		//테스트 코드
+		/* 		
+		const arr = [ 1, 2, 3, 4, 5 ];
+
+		 function printArr(item) {
+		 write(item, "h1");
+		 }
+
+		 apply(arr, printArr(arr)); 
+		 */
+
+		const data = [];
+
+		while (true) {
+			const input = window.prompt("데이터를 입력하세요(취소 = 중지)"); //취소버튼 클릭시 null전달
+			if (input === null) {
+				break;
+			}
+			data.push(input); //입력된 데이터를 배열에 저장
+		}
+		
+		const randNum = Math.floor(Math.random() * 10) + 1;
+		console.log("난수 값 :" + randNum);
+
+		let result;
+		if (randNum === 1 || randNum === 4 || randNum === 6) {
+			result = apply(data, printH1);
+		} else if (randNum === 3 || randNum === 5 || randNum === 7) {
+			result = apply(data, printH4);
+		} else if (randNum === 8 || randNum === 9) {
+			result = apply([ "ㅋㅋ" ], printH1);
+		} else {
+			result = apply(data, function(item) {
+			
+			});
+		}
+
+		if (result) {
+			window.alert("처리 성공");
+		} else {
+			window.alert("처리 실패");
+		}
+	</script>
+</body>
+</html>

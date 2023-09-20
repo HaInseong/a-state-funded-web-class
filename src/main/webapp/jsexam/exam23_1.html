@@ -9,26 +9,33 @@
 <hr>
 <script src="util.js"></script>
 <script>
-const obj = {
+const obj = { //프로그램에서 사용된 데이터 값을 리터럴이라 한다.
+		//객체식 = 객체 리터럴식
+		//JS이더라도 대입 연산의 마지막에는 꼭 세미콜론 붙이는게 성능에 좋음.
+		//객체를 obj에 담으면 obj는 이 객체 리터럴식 외에 다른 객체는 저장할 수 없음.
 				name : "듀크",
 				eat : function(food) {
 					write(this.name+"가 "+food+"를 먹어요.", "h3")
 				}
-          }
+          };
 
 obj.eat("바나나");
 obj.eat("딸기");
 hr()
 write(typeof obj, "h2");
+//자바스크립트 객체는 객체 생성 이후에도 멤버를 추가할 수 있다. 비어있는 멤버 변수 만들어서 계속 추가할 수 있다 = 배열과 유사
 obj.project = "자바스크립트";
 obj.study = function() {
 	write(this.name+"는 "+this.project+"를 공부해요.", "h3");
+};
+obj.study();//듀크는 자바스크립트를 공부해요 //eat과 study는 메소드이므로 호출 가능함.
+for(var key in obj) { //for in 반복문을 배열이 아니라 객체를 대상으로 사용할 시에는 인덱스가 아니라 문자열 형식으로 전달된 속성명이 전달된다.  // obj가 담고 있는 객체의 멤버 갯수만큼 반복된다. 
+	//in은 객체에서 사용될 때는 인덱스가 아니라 키를 가져온다.
+	write(key + ":" + obj[key], "h3"); // 객체.속성명 = 객체['속성명'] 두가지 방법으로 접근 가능, 객체.메서드명()
+	//obj[key] 문자열형으로 key에 대입된 상태라 그냥 key로 접근함.
 }
-obj.study();
-for(var key in obj) {
-	write(key + ":" + obj[key], "h3"); // 객체.속성명, 객체['속성명'], 객체.메서드명()
-}
-delete obj.study;
+window.write(obj.name)
+delete obj.study; //멤버 3개로 변경됨.
 hr();
 for(var key in obj) {
 	write(key + ":" + obj[key], "h3");

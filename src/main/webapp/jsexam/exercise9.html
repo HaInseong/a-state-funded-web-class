@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script src="util.js"></script>
+	<script>
+		function printObject(p) {
+			if (typeof p !== 'object') {
+				return;
+			}
+			writeColor(p.msg, p.tag, p.color);
+		}
+
+		function getRandObj() {
+			const tags = [ "h1", "h2", "h3" ];
+			const colors = [ "olive", "gold", "violet", "tomato", "teal", "slategray", "maroon", "purple"];
+			const messages = [ "승완", "인성", "승현", "지오", "유니코" ];
+
+			const randTag = tags[Math.floor(Math.random() * tags.length)];
+			const randColor = colors[Math.floor(Math.random() * colors.length)];
+			const randMessages = messages[Math.floor(Math.random() * messages.length)];
+
+			return {
+				tag : randTag,
+				color : randColor,
+				msg : randMessages
+			};
+		}
+
+		for (let i = 0; i < 5; i++) {
+			const obj = getRandObj();
+			printObject(obj);
+		}
+	</script>
+</body>
+</html>
