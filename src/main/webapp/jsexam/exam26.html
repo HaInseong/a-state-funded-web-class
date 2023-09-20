@@ -9,8 +9,8 @@
 <hr>
 <script src="util.js"></script>
 <script>
-function Student(name, korean, math, english, science) {
-    this.이름 = name;
+function Student(name, korean, math, english, science) { //생성자 함수는 대문자로 시작
+    this.이름 = name; //this를 빼면 윈도우의 이름 propery가 된다.
     this.국어 = korean;
     this.수학 = math;
     this.영어 = english;
@@ -23,7 +23,9 @@ var st3 = new Student('도우너', 76, 96, 94, 90);
 write(st1.이름+ " : " + st1.국어+ ", " + st1.수학+ ", " +  st1.영어+ ", " +  st1.과학, "h2");
 write(st2.이름+ " : " + st2.국어+ ", " + st2.수학+ ", " +  st2.영어+ ", " +  st2.과학, "h2");
 write(st3.이름+ " : " + st3.국어+ ", " + st3.수학+ ", " +  st3.영어+ ", " +  st3.과학, "h2");
-	
+
+writeColor(st1, "h1", "red"); //[object Object]
+writeColor(st1.toString(), "h1", "red"); //자바스크립트도 자바처럼 객체를 호출하면 자동으로 toString이 호출된다.
 	
 </script>
 </body>

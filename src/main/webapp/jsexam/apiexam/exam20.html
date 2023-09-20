@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script src="../util.js"></script>
+<script>
+let obj = {
+    name: '자바스크립트',
+    age: 27,
+    kind: '웹앱 개발 스크립트 언어'
+};
+
+write("[ 자바스크립트 객체를 JSON 문자열로 ]", "h1");
+let jsonStr = JSON.stringify(obj);
+writeColor(jsonStr, "h3", "red");
+writeColor(typeof jsonStr, "h2", "red");
+hr();
+write("[ JSON 문자열을 자바스크립트 객체로 ]", "h1");
+let toObj = JSON.parse(jsonStr);
+writeColor(toObj.name, "h3", "blue");
+writeColor(toObj.age, "h3", "blue");
+writeColor(toObj.kind, "h3", "blue");
+writeColor(typeof toObj, "h2", "blue");
+</script>
+</body>
+</html>
