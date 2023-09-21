@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>인라인 이벤트 모델</title>
+</head>
+<body>
+<h1>이벤트 모델-인라인</h1>
+<hr>
+<button onclick="changeColR()">빨강색</button>
+<button onclick="changeColB()">파랑색</button>
+<button onclick="changeColY()">노랑색</button>
+<hr>
+
+<h2 id="t1"></h2>
+
+<script src="util.js"></script>
+<script>
+
+let date = new Date();
+let message = document.getElementById("t1");
+
+message.textContent = "오늘은 " + (date.getMonth()+1) + "월 " + date.getDate() + "일 입니다.";
+
+function changeColR() {
+	message.style.color = "red";
+}
+
+function changeColB() {
+	message.style.color = "blue";
+}
+
+function changeColY() {
+	message.style.color = "gold";
+}
+
+</script>
+
+
+</body>
+</html>

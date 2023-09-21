@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<h1>이벤트 모델-인라인</h1>
+<hr>
+<button id="btn1">빨강색</button>
+<button id="btn2">파랑색</button>
+<button id="btn3">노랑색</button>
+<hr>
+
+<h2 id="t1"></h2>
+
+<script src="util.js"></script>
+<script>
+
+let date = new Date();
+
+const dom1 = document.querySelector('#btn1');
+const dom2 = document.querySelector('#btn2');
+const dom3 = document.querySelector('#btn3');
+
+let message = document.getElementById("t1");
+message.textContent = "오늘은 " + (date.getMonth()+1) + "월 " + date.getDate() + "일 입니다.";
+
+function changeColR() {
+	message.style.color = "red";
+}
+
+function changeColB() {
+	message.style.color = "blue";
+}
+
+function changeColY() {
+	message.style.color = "gold";
+}
+
+dom1.addEventListener("click", changeColR);
+dom2.addEventListener("click", changeColB);
+dom3.addEventListener("click", changeColY);
+
+</script>
+
+</body>
+</html>

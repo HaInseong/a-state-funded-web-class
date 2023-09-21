@@ -13,7 +13,7 @@
 <body>
 <script src="../util.js"></script>
 <script>
-    window.onload = function() {
+    window.onload = function() { //onload 이 페이지의 로드가 끝나면 수행해, 로드가 끝났다는 것은 html파서가 모든 돔객체를 생성한 후를 뜻함. window객체가 브라우저인데 onload는 아무곳에나 붙지 않음.
     	const outDom = document.getElementById("output");
     	for(let i=1; i < 6; i++)
 			outDom.innerHTML +=

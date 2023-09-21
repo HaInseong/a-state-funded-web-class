@@ -9,18 +9,18 @@
 <hr>
 <script src="util.js"></script>
 <script>
-function sum(...p) {  // ES6 Rest Parameter = sum에게는 0개 이상의 아규먼트를 전달 할 수 있다.
+function printSum(tag, color, ...p) { //가변 매개변수는 항상 마지막이어야 한다.
 	let result = 0;
-	for(var i=0; i < p.length; i++) //배열이 전달되므로 배열처럼 사용하면 된다.
+	for(var i=0; i < p.length; i++) 
 		result += p[i];
-	return result;
+	writeColor(result, tag, color);
 }
-writeColor(sum(), 'h3', 'red');
-writeColor(sum(10), 'h3', 'green');
-writeColor(sum(10,20), 'h3', 'yellow'); 
-writeColor(sum(10, 20, 30), 'h3', 'lime'); 
-writeColor(sum(1,2,3,4,5,6,7,8), 'h3', 'blue');
-writeColor(sum(1,2,3,4,5,6,7,8,9,10), 'h3', 'orange');
+printSum('h3', 'red');
+printSum('h3', 'green', 10);
+printSum('h3', 'yellow', 10, 20);  
+printSum('h3', 'lime', 10, 20, 30); 
+printSum('h3', 'blue', 1, 2, 3, 4, 5, 6, 7, 8);
+printSum('h3', 'orange', 1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 </script>
 </body>
 </html>

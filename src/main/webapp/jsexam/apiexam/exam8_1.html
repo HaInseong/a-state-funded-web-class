@@ -14,15 +14,18 @@
 <h1 id="t2">표준 이벤트 모델</h1>
 <hr>
 <script>    
-	function f1(t) {
+	function f1(t) { //매개변수는 선택인데, 사용하게 되면 발생된 이벤트 객체 전달
 		alert(t.textContent);
 	}
+	
+	
 	const dom2 = document.querySelector('#t1');
     const dom3 = document.querySelector('#t2');
+    
 	function f2(e) {
 		alert(e);
-		alert(e.target.textContent);
-		alert(this.textContent);
+		alert(e.target.textContent); //발생된 이벤트 객체의 textContent 출력
+		alert(this.textContent); //발생된 이벤트 객체의 textContent 출력
 	} 
     dom2.onclick = f2;
     dom3.addEventListener("click", f2);

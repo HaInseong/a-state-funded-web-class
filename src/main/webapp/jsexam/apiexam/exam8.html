@@ -17,13 +17,18 @@
 	function f1(p) {		
 		alert(p.textContent);
 	}
+	
 	const dom2 = document.querySelector('#t1');
     const dom3 = document.querySelector('#t2');
+    
 	function f2() {
-		alert(dom2.textContent);
+		//alert(dom2.textContent);
+		alert(this.textContent);
 	}
+	
 	function f3() {
-		alert(dom3.textContent);
+		//alert(dom3.textContent);
+		alert(this.textContent); //dom3에서 호출 됐으니 this = dom3
 	}    
     dom2.onclick = f2;
     dom3.addEventListener("click", f3);

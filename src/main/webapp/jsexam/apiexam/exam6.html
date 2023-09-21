@@ -27,7 +27,7 @@
 		const kday = ['일','월', '화', '수', '목', '금', '토'][new Date().getDay()];
 		dom.textContent =`오늘은 ${kday}요일`; // ES6에서 추가된 구문 : 템플릿 리터럴
 		dom.style.color ="red";
-		dom.style.backgroundColor ="lime"; // background-color, font-weight -> fontWeight
+		dom.style.backgroundColor ="lime"; // background-color, font-weight -> fontWeight 마이너스기호가 들어간 애들은 자바스립트에서 그냥 쓸 수 없다, 정해놓은 룰은 -기호를 없애고 첫글자를 대문자로 쓰는 것
 	}, 5000);
 </script>
 </body>

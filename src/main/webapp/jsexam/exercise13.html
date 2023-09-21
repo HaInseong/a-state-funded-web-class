@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>구구단</title>
+<style>
+* {
+margin: 0;
+}
+#title {
+text-align: center;
+}
+#container {
+text-align: center;
+}
+</style>
+</head>
+<body>
+<h1 id="title">구구단</h1>
+
+<div id="container">
+<button id="btn1">1단</button>
+<button id="btn2">2단</button>
+<button id="btn3">3단</button>
+<button id="btn4">4단</button>
+<button id="btn5">5단</button>
+<button id="btn6">6단</button>
+<button id="btn7">7단</button>
+<button id="btn8">8단</button>
+<button id="btn9">9단</button>
+
+</div>
+<p id="content">
+
+<script src="util.js"></script>
+<script>
+let content = document.getElementById('content');
+function gugudan(e) {
+	alert(e)
+	var i = 1;
+	for(var j=1; j<10; j++) {
+		write(content.textContent = "gkgk", "h2")
+		
+		hr();
+	}
+}
+
+const dom1 = document.querySelector('#btn1');
+const dom2 = document.querySelector('#btn2');
+const dom3 = document.querySelector('#btn3');
+const dom4 = document.querySelector('#btn4');
+const dom5 = document.querySelector('#btn5');
+const dom6 = document.querySelector('#btn6');
+const dom7 = document.querySelector('#btn7');
+const dom8 = document.querySelector('#btn8');
+const dom9 = document.querySelector('#btn9');
+
+
+dom1.addEventListener("click", gugudan );
+dom2.addEventListener("click", );
+dom3.addEventListener("click", );
+dom4.addEventListener("click", );
+dom5.addEventListener("click", );
+dom6.addEventListener("click", );
+dom7.addEventListener("click", );
+dom8.addEventListener("click", );
+dom9.addEventListener("click", );
+</script>
+</body>
+</html>
