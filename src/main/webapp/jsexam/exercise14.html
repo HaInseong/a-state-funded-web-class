@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+* {
+	margin: 0px;
+}
+
+#title { 
+	text-align: center;
+	text-shadow: 10px 10px 10px, 20px 20px 20px;
+	padding: 40px;
+}
+
+#d1 {
+	width: 50%;
+	border: solid;
+	padding: 40px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	box-shadow: 10px 10px 10px, 20px 20px 20px;
+}
+
+button {
+	background-color: tomato;
+}
+
+#printArea {
+	text-align: center;
+}
+
+#wd {
+	text-align: center;
+	margin-top: 40px;
+}
+
+#weatherImage {
+	width: 20%;
+}
+</style>
+</head>
+<body>
+	<h1 id="title">이벤트 처리 실습</h1>
+	<hr>
+	<div id="d1">
+		<button>맑음</button>
+		<button>흐림</button>
+		<button>비</button>
+	</div>
+	<hr>
+	<div id="wd">
+		<img id="weatherImage" src="">
+	</div>
+	<script src="util.js"></script>
+	<script>
+		//const imgBtns = document.querySelectorAll('button');
+		let img = document.getElementById('weatherImage');
+		let d1 = document.getElementById('d1');
+
+		function imgOpen(e) {
+			let imageUrl = '';
+			let imgBtn = e.target.textContent;
+			if (imgBtn === '맑음') {
+				d1.innerHTML = "<h1>집에 가자<h2>";
+				imageUrl = '../images/sun.png';
+			} else if (imgBtn === '흐림') {
+				imageUrl = '../images/cloud.png';
+			} else if (imgBtn === '비') {
+				imageUrl = '../images/rain.png';
+			}
+			img.src = imageUrl;
+		}
+	/* 	imgBtns.forEach(function(button) { */
+			d1.addEventListener("click", imgOpen);
+	/* 	}); */
+	</script>
+</body>
+</html>

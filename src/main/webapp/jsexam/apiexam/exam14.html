@@ -16,11 +16,11 @@ function test1() {
 }
 function test2() {
 	alert("고전이벤트모델 버튼 클릭");
-	btn1.onmouseover = null;
+	btn1.onmouseover = null; //등록되어 있던 이벤트 핸들러 기능을 한번만 사용하고 싶을 때
 }
 function test3() {
 	alert("표준이벤트모델 버튼 클릭");
-	btn2.removeEventListener("mouseover", test3);
+	btn2.removeEventListener("mouseover", test3); //removeEventListener() 기능을 한번만 사용하고 싶을 때, 인라인은 불가능
 }
 var btn1 = document.querySelector("#b1");
 var btn2 = document.getElementById("b2");

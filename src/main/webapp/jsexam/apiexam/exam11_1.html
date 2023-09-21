@@ -18,7 +18,7 @@ function startTime() {
         window.alert("그만 클릭하라옹... 이미 시간 출력하고 있음!!");
     } else {
 	    target.innerHTML = "<h2>"+new Date().toLocaleString()+"</h2>";
-        interval_id = window.setInterval(function () {
+        interval_id = window.setInterval(function () { //setInterval(함수, 시간) 메서드는 시간마다 함수를 실행하는 메소드이다.
 	        target.innerHTML = "<h2>"+new Date().toLocaleString()+"</h2>";
 	    }, 1000);
 	}

@@ -19,7 +19,9 @@ function test2() {
 	return false;
 }
 function test3(e) {
-	e.preventDefault();
+	e.preventDefault(); // 디폴트 이벤트 핸들러 실행 취소
+	alert(e);
+	e.target.innerHTML = "디폴트 이벤트 핸들러 실행 취소 됨";
 	alert("표준이벤트모델 버튼 클릭");	
 }
 var link1 = document.querySelector("#t1");

@@ -37,9 +37,9 @@ function clickHandler() {
 	var dom2 = document.getElementsByTagName("div")[0];
 	var dom3 = document.getElementsByTagName("section")[0];
 	var dom4 = document.getElementsByTagName("body")[0];
-	dom1.addEventListener("click", displayAlert);	
-	dom2.addEventListener("click", displayAlert, true);	
-	dom3.addEventListener("click", displayAlert, true);
+	dom1.addEventListener("click", displayAlert);
+	dom2.addEventListener("click", displayAlert, true); //true = 캡쳐링하겠다는 의미	
+	dom3.addEventListener("click", displayAlert, true); //캡쳐링 하겠다는 핸들러 중에 최상위 부모 태그가 가장 먼저 수행된다. 그리고 역으로 내려온다.
 	dom4.addEventListener("click", displayAlert);
 }
 function displayAlert(e) {

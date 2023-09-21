@@ -46,10 +46,10 @@ function clickHandler() {
 }
 function displayAlert(e) {
 	let msg = `${e.target.nodeName} 태그에서 ${e.type} 이벤트 발생함!!\n`;
-	if (e.target == e.currentTarget)
+	if (e.target == e.currentTarget) //e.currentTarget는 이벤트 발생이 버블링으로 전파된 객체를 의미. = 부모 객체로 올라갈 때 마다 e.currentTarget이 바뀜.
 		msg += `${e.target.nodeName} 태그의 ${e.type} 이벤트 핸들러 수행~~`;
 	else 
-		msg += `이벤트 버블링으로 ${e.currentTarget.nodeName} 태그의 ${e.type} 이벤트 핸들러 수행~~`;
+		msg += `이벤트 버블링으로 ${e.currentTarget.nodeName} 태그의 ${e.type} 이벤트 핸들러 수행~~`; //nodeName = 태그이름, type = 이벤트 종류
 	window.alert(msg);
 }
 window.addEventListener("load", clickHandler);

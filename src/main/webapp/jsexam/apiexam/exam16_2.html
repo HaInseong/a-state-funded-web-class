@@ -44,9 +44,9 @@ function clickHandler() {
 function displayAlert(e) {	
 	let msg = `e.target : ${e.target}\n`;
 	msg += `e.currentTarget : ${e.currentTarget}\n`;
-	msg += `this : ${this}\n`;
+	msg += `this : ${this}\n`; //함수 안에 생성된 this는 currentTarget과 동일
 	window.alert(msg);
-	//e.stopPropagation();
+	e.stopPropagation(); //버블링 취소
 }
 window.addEventListener("load", clickHandler);
 </script>

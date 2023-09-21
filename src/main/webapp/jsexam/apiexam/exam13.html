@@ -5,27 +5,28 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>고전 이벤트 모델과 표준 이벤트 모델의 차이</h1>
-<hr>
-<button>고전 이벤트 모델</button>
-<button>표준 이벤트 모델</button>
-<script>
-    var doms = document.querySelectorAll("button");
-	var dom1 = doms[0];
-	var dom2 = doms[1];
-	
-	dom1.onclick = function () {
-								 alert("첫 번째 핸들러 수행(고전)");
-							  };
-	dom1.onclick = function () {					
-								 alert("두 번째 핸들러 수행(고전)");
-							  };
-	dom2.addEventListener("click", 
-			                 function () { alert("첫 번째 핸들러 수행(표준)");});
-	dom2.addEventListener("click", 
-            function () { alert("두 번째 핸들러 수행(표준)");});
+	<h1>고전 이벤트 모델과 표준 이벤트 모델의 차이</h1>
+	<hr>
+	<button>고전 이벤트 모델</button>
+	<button>표준 이벤트 모델</button>
+	<script>
+		var doms = document.querySelectorAll("button");
+		var dom1 = doms[0];
+		var dom2 = doms[1];
 
-</script>
+		dom1.onclick = function() {
+			alert("첫 번째 핸들러 수행(고전)");
+		}; //고전은 함수 등록 마지막만 출력됨, 첫 번째는 alert는 씹힘.
+		dom1.onclick = function() {
+			alert("두 번째 핸들러 수행(고전)");
+		};
+		dom2.addEventListener("click", function() {
+			alert("첫 번째 핸들러 수행(표준)"); //표준은 함수등록 여러개 가능.
+		});
+		dom2.addEventListener("click", function() {
+			alert("두 번째 핸들러 수행(표준)");
+		});
+	</script>
 </body>
 </html>
 

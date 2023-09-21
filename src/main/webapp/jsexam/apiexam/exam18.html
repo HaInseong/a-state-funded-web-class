@@ -102,7 +102,7 @@
 		var randomValue = Math.random();
     	var colorCode = '#'+Math.round(Math.random() * 0xffffff).toString(16);
     	doms.forEach(function(elem){elem.style.color = colorCode});
-    }, 2000);
+    }, 1000);
     const kordayname = ["일", "월", "화", "수", "목", "금", "토"]
     document.getElementsByTagName("output")[0].textContent = kordayname[new Date().getDay()]; 
 </script>
