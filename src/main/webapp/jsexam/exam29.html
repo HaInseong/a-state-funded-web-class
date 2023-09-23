@@ -27,12 +27,14 @@ Date.prototype.getKorDay = function() {	 //메서드 추가, 이 자바스크립
 	}
 	return result;
 }
+
 let d = new Date();
 write(d.toLocaleDateString(), 'h1');
 write(d.toLocaleTimeString(), 'h2');
-write(d.getKorDay(), 'h3');
+write(d.getKorDay(), 'h3'); // 요일 날짜 메서드
 // 본인 생일
-d = new Date(2000, 0, 1);
+hr()
+d = new Date(1991, 0, 19);
 write(d.toLocaleDateString(), 'h1');
 write(d.toLocaleTimeString(), 'h2');
 write(d.getKorDay(), 'h3');

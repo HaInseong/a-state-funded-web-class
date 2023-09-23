@@ -5,18 +5,32 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>자바스크립트 배열과 for 문</h1>
-<script src="util.js"></script>
-<script>
+	<h1>자바스크립트 배열과 for 문</h1>
+	<script src="util.js"></script>
+	<script>
 var ary = [10, 20, 30];
 for(let i=0; i < ary.length; i++)
 	writeColor(ary[i], "h3", "blue");
 hr();
-for(let i in ary) //foreach문이라고도 함, 자바의 foreach문과는 약간 다름, 자바스크립트는 실제 값이 아니라 인덱스를 in(:) 앞의 변수에 전달한다. 즉 배열객체 뿐만아니라 일반객체에도 foreach문을 사용할 수 있다.
+for(let i in ary) //foreach문이라고도 함, 자바의 foreach문과는 약간 다름, 자바스크립트는 실제 값이 아니라 인덱스를 in(:) 앞의 변수에 전달한다. 
+//즉, 배열객체 뿐만아니라 일반객체에도 foreach문을 사용할 수 있다.
 	writeColor(ary[i], "h3", "red");
 hr();
 for(let e of ary) // ECMAScript 6(ES 6)에 추가 됨, of를 쓰면 인덱스가 아니라 자바처럼 element(값)가 전달됨
 	writeColor(e, "h3", "green");
+	
+const obj = { a: 1, b: 2, c: 3 };
+for (let key in obj) {
+  console.log(key, obj[key]);
+  alert(obj["a"]);
+}
+
+const ary1 = [1, 2, 3];
+for (let element of ary1) {
+  console.log(element);
+}
+
+
 </script>
 
 </body>

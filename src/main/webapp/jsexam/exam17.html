@@ -13,9 +13,9 @@ var d = new Date();
 writeColor(d, "h2", "red");
 writeColor(d.toLocaleString(), "h2", "blue"); //우리나라 관습을 적용한 시간이 나옴
 writeColor(d.getFullYear(), "h2", "green");
-writeColor(d.getMonth(), "h2", "magenta");
-writeColor(d.getDate(), "h2", "orange"); // 0 : 일요일
-writeColor(d.getDay(), "h2", "magenta");
+writeColor(d.getMonth(), "h2", "magenta"); //자바와 마찬가지로 자바스크립트도 월은 1작게 처리해야 함.
+writeColor(d.getDate(), "h2", "orange"); 
+writeColor(d.getDay(), "h2", "magenta"); // 0 = 일요일
 writeColor(d.getTime(), "h2", "brown");
 writeColor(Date.now(), "h2", "red");
 hr();
@@ -41,6 +41,10 @@ writeNewLine("리스트의 모든 엘리먼트 : " + list);
 hr();
 for (var i in list) {
     writeNewLine(list[i]);
+}
+hr();
+for (var i of list) {
+	writeNewLine(i);
 }
 hr();
 for (var i=0; i < list.length; i++) {

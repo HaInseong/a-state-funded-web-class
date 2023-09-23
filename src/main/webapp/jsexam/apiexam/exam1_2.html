@@ -14,7 +14,10 @@ function Person(name, point, city) {
 	this.point = point;
 	this.city = city;
 }
+
+//prototype 오버라이딩 (=) 사용
 Person.prototype.toString = function() { return this.name; };
+
 const persons = [ //객체 배열 생성
     new Person("둘리",88,"서울"),  
     new Person("또치",92,"서울"),

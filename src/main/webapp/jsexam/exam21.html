@@ -12,6 +12,9 @@ function outerFunction() {
     };
 }
 outerFunction( )( ); //두번째 소괄호는 리턴되는 함수를 바로 호출하는 구현문법임.
+var test = outerFunction();
+test();
+
 var result = outerFunction( ); //함수를 담게되는 변수는 함수의 이름을 대신한다.
 result( );
 result( );

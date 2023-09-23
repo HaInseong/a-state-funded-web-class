@@ -8,7 +8,8 @@
 <h2>함수에서 데이터의 타입채크</h2>
 <hr>
 <button>zzz</button>
-<button onClick="clickProcess(100);">숫자</button> <!-- onClick = 인라인 이벤트 모델: 이벤트 핸들러를 만들어서 버튼을 눌렀을 때 기능이 구현될 수 있도록 해야한다. -->
+ <!-- onClick = 인라인 이벤트 모델: 이벤트 핸들러를 만들어서 버튼을 눌렀을 때 기능이 구현될 수 있도록 해야한다. -->
+<button onClick="clickProcess(100);">숫자</button>
 <button onCLICK="clickProcess('100');">문자열</button>
 <button onclick="clickProcess(true);">논리값</button>
 <button onclick="clickProcess(function(){ });">함수</button>
@@ -27,7 +28,7 @@ function clickProcess(p) {
 	} else if (typeof p == "function") {
 		alert("함수 전달!!");
 	} else if (typeof p == "object") {
-		if (Array.isArray(p)) //isArray()메소드는 static 메소드이고, 자바스크립트에서는 Araay형 자료형이 없고 배열도 Object형으로 쓰인다.
+		if (Array.isArray(p)) //isArray()메소드는 static 메소드이고, 자바스크립트에서는 Araay형은 자료형이 없고 배열도 Object형으로 쓰인다.
 			alert("배열객체 전달!!");
 		else 
 			alert("객체 전달!!");

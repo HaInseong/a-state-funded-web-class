@@ -16,6 +16,8 @@ function Student(name, korean, math, english, science) {
     this.영어 = english;
     this.과학 = science;    
 }   
+//똑같은 기능을 가진 메서드가 객체가 생성될 때 마다 매번 생성될 필요는 없다. 
+//이럴 경우 자바의 메소드 메모리 영역처럼 portotype을 지정해서 선언해준다.
 Student.prototype.toString = function() {
 	return this.이름+ " :  " +
 		 this.국어+ ", " +

@@ -14,6 +14,8 @@ function Person(name, point, city) {
 	this.point = point;
 	this.city = city;
 }
+
+//@Override
 Person.prototype.toString = function() { return this.name; };
 const persons = [
     new Person("둘리",88,"서울"),  
@@ -32,6 +34,8 @@ const sum = points.reduce(function (total, currentValue) {
 }, 0);
 writeColor(sum, 'h2', 'green');
 hr();
+
+//forEach 반복문
 points.forEach(function(e, i) {
 	writeColor((i+1)+"번 데이터 "+e+"!!", 'h3', 'magenta');
 })

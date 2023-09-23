@@ -29,7 +29,9 @@
 	Student.prototype.toString = function() {
 			return this.name+"학생의 총점은 "+this.getSum()+"입니다.";
 	};
-	Student.getSchoolName = function() { // 생성자 함수 만들어 놓고 정적메서드로 만들어 놓은 것, 객체 생성하지 않아도 생성자 함수 이름으로 접근이 가능한 멤버를 정의한 것 
+	
+	// 생성자 함수 만들어 놓고 정적메서드로 만들어 놓은 것, 객체 생성하지 않아도 생성자 함수 이름으로 접근이 가능한 멤버를 정의한 것 
+	Student.getSchoolName = function() {
 		//ex. Math도 마찬가지, Student.getSchoolName은 정적 멤버로 정의한 것.
 		return "코사 학교";
 	}

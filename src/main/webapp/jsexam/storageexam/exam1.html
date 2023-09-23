@@ -10,18 +10,18 @@
 		info = document.getElementById("info");
 		info.style.display = "block";
 		window.localStorage.setItem("memo", msg.value);
-	};
+	}
 
 	function pageload() {
 		msg = document.getElementById("txtBox");
 		msg.value = window.localStorage.getItem("memo");
-	};
+	}
 
 	function clr() {
 		msg.value = "";
 		localStorage.clear();
 		info.style.display = "none";
-	};
+	}
 </script>
 </head>
 <body onload="pageload()">
