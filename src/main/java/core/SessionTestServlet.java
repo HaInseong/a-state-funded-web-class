@@ -19,7 +19,7 @@ public class SessionTestServlet extends HttpServlet {
 		String msg="";
 		long time = session.getCreationTime();
 		String id = session.getId();
-	    if(command.equals("view")) {
+	    if(command != null && command.equals("view")) {
 			if(session.isNew()) {
 				msg = "세션 객체 생성 : "; 
 			} else {
@@ -27,7 +27,7 @@ public class SessionTestServlet extends HttpServlet {
 			}
 			msg += "<br>id : " + id + " <br>time : " +
 			                new Date(time);
-		} else if (command.equals("delete")) {
+		} else if (command != null && command.equals("delete")) {
 			session.invalidate();
 			msg = id + "을 id로 갖는 세션 객체 삭제!!";
 		} else {

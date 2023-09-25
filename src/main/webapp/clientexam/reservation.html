@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style>
+* {
+    font-family: 'iceSotong-Rg';
+/*     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/iceSotong-Rg.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal; */
+}
+
+@font-face {
+    font-family: 'iceSotong-Rg';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/iceSotong-Rg.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1 {
+text-align: center;
+text-shadow: 1px 1px 1px lime, 2px 2px 2px lime;
+
+}
+
+#container {
+background: linear-gradient( to bottom, yellow, lime );
+background-color: lime;
+text-align: center;
+margin-left: auto;
+margin-right: auto;
+padding: 20px;
+width: 40%;
+border-radius: 10px;
+}
+
+#reservationTable {
+text-align: left;
+}
+</style>
+</head>
+<body>
+
+
+	<h1>펜션 예약 서비스</h1>
+	<hr>
+	<div id="container">
+		<form id="reservationTable" name="reservationForm" action="/edu/reservation" method="post">
+			예약자명: <input name="name"><br> 예약암호: <input type="password" name="password"><br>
+			룸선택: 
+			<input type="radio" id="dooli" name="room" value="둘리"> <label for="dooli">둘리</label> 
+			<input type="radio" id="dooli" name="room" value="둘리2"> 둘리2
+			<input type="radio" id="heedongi" name="room" value="희동이"> <label for="heedongi">희동이</label> 
+			<input type="radio" id="douni" name="room" value="도우너"> <label for="douni">도우너</label>
+			<input type="radio" id="ttoci" name="room" value="또치"> <label for="ttoci">또치</label><br>
+
+			추가요청사항: 
+			<input type="checkbox" id="barbecue" name="order" value="바베큐"> <label for="barbecue">바베큐</label>
+			<input type="checkbox" id="pool" name="order" value="수영장"> <label for="pool">수영장</label>
+			<input type="checkbox" id="fishing" name="order" value="낚시"> <label for="fishing">낚시</label>
+			<input type="checkbox" id="breakfast" name="order" value="조식"> <label for="breakfast">조식</label><br>
+			<label for="date">예약 날짜:</label> <input type="date" id="date" name="date">
+			<hr>
+			<button type="submit">보내기</button>
+			<button type="reset">다시 작성하기</button><br>
+		</form>
+	</div>
+</body>
+</html>

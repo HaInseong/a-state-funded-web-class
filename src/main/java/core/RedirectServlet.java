@@ -10,7 +10,7 @@ public class RedirectServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("RedirectServlet 수행");
-		response.sendRedirect("/edu/clientexam/output.html");
+		response.sendRedirect("/edu/clientexam/output.html"); //절대 URI를 줌
 		//response.sendRedirect("http://www.naver.com/");
 	}
 }
