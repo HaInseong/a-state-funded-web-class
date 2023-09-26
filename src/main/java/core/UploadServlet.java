@@ -28,10 +28,10 @@ public class UploadServlet extends HttpServlet {
 		Collection<Part> parts = request.getParts();
 		for (Part part : parts) {
 			if (part.getContentType() != null) {
-				String fileName = part.getSubmittedFileName();
+				String fileName = part.getSubmittedFileName(); //업로드 되는 파일 이름 추출하여 서버에 저장
 				if (fileName != null) {
 					part.write(fileName.substring(0, fileName.lastIndexOf(".")) + "_"
-							+ System.currentTimeMillis() + fileName.substring(fileName.lastIndexOf(".")));
+							+ System.currentTimeMillis() + fileName.substring(fileName.lastIndexOf("."))); //파일 열고 닫고 안해도 되고, 업로드된 파일의 네임을 지정된 아규먼트에 저장한다.
 					out.print("<br>업로드한 파일 이름: " + fileName);
 					out.print("<br>크기: " + part.getSize());				
 				}

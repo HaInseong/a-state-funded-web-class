@@ -15,7 +15,7 @@ import javax.servlet.http.Part;
 public class PartTestServlet extends HttpServlet {   
 	private static final long serialVersionUID = 1L;
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {    	
-        Collection<Part> parts = request.getParts();
+        Collection<Part> parts = request.getParts(); //여러개의 파트로 나눠서 전달된 내용은 getParts() 메소드로 받아서 Collection 객체에 담는다.
         System.out.println("========== 요청 받음 ==========");
         for(Part part : parts) {        	
             System.out.print("name : ");
@@ -31,3 +31,4 @@ public class PartTestServlet extends HttpServlet {
         }        
     }
 }
+
