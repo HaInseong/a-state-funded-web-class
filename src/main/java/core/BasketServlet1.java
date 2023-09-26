@@ -20,6 +20,7 @@ public class BasketServlet1 extends HttpServlet {
 		PrintWriter out = response.getWriter();
 
 		String product = request.getParameter("prod");
+		System.out.println(product);
 		String imagePath = getImagePath(product);
 
 		out.print("<h1>선택한 상품: " + product + "</h1>");
