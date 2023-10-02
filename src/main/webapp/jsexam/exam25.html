@@ -7,7 +7,9 @@
 <body>
 <h1>자바스크립트의 객체 생성과 사용(객체리터럴)</h1>
 <hr>
-<script src="util.js"></script>
+<script src="util.js">
+//src="util.js" js파일 끌어온다는 의미.
+</script>
 <script>
 	const person = { }; //비어있는 객체를 생성, JS는 객체 안에 멤버 추가는 자유롭다.
 	person.이름 = '홍길동';
@@ -15,12 +17,15 @@
 	person.특기 = '프로그래밍';
 	person.장래희망 = '생명공학자';
 	
-	for(var key in person)
+	for(var key in person) {
+		//in은 index 값 추출
 		writeColor(person[key], "h3", "red");
+	}
 	document.writeln("==================");
 	delete person.취미;
-	for(var key in person)
+	for(var key in person) {
 		writeColor(person[key], "h3", "blue");
+	}
 </script>
 </body>
 </html>

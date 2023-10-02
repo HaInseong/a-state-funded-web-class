@@ -7,23 +7,24 @@
 <body>
 <h2 onclick="getImage();">이 행을 클릭해요. Ajax로 이미지를 요청하고 출력해요....</h2>
 <script>
-let imgname = 1;
+let imgname = 0;
 function getImage() {
 	imgname = imgname == 10 ? 1 : imgname+1; 
 	const xhr = new XMLHttpRequest();	
-	xhr.responseType = 'blob';
+	xhr.responseType = 'blob'; //binary large object의 약자 = 텍스트 형식이 아니라 이미지 형식을 받아오는 지정 형식
 	xhr.onload = function(e) {
-  		if (this.status == 200) {
-    		const blob = e.target.response
-    		const img = document.createElement('img');
+  		if (this.status == 200) { //XMLHttpRequest에서 리퀘스트가 발생하므로 this는 XMLHttpRequest를 의미. 응답 상태코드 200인지 체크
+    		const blob = e.target.response //response로 읽어온 내용(바이너리)을 blob에 지정.
+    		const img = document.createElement('img'); //img 태그에 대한 돔객체 생성 후 저장.
     		img.width=100;
     		img.height=100;
-    		img.src = URL.createObjectURL(blob);
+    		//src에는 출력할 이미지의 url을 주는 것이지 문자열을 주는 것이 아님??
+    		img.src = URL.createObjectURL(blob); //응답된 이미지 blob을 가지고 가상 url을 만든다. = 가상 url을 만들어주는 API
     		document.body.appendChild(img);    
   		}
 	};
 	xhr.open('GET', `/edu/images/${imgname}.jpg`, true);
-	xhr.send();
+	xhr.send(); //실제 서버에게 요청
 }
 </script>
 </body>

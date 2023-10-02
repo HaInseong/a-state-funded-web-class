@@ -19,8 +19,10 @@ document.write("<hr>");
 
 var ary3 = [30, 11, 5, 27, 9];
 document.write(ary3 + "<br>");
-document.write(ary3.sort() + "<br>"); //compare function을 사용하지 않으면 일반 sort()메소드는 다 문자열로 인식하여 sorting한다.
-document.write(ary3.sort(function(a, b){ return a - b;}) + "<br>");//compare function의 익명함수, 양의값을 리턴했을 때만 자리바꿈을 한다. = 뒤로 더 큰 수를 보내겠다는 의미가 된다.
+document.write(ary3.sort() + "<br>"); 
+//compare function을 사용하지 않으면 일반 sort()메소드는 다 문자열로 인식하여 sorting한다.
+document.write(ary3.sort(function(a, b){ return a - b;}) + "<br>");
+//compare function의 익명함수, 양의값을 리턴했을 때만 자리바꿈을 한다. = 뒤로 더 큰 수를 보내겠다는 의미가 된다.
 document.write(ary3.sort(function(a, b){ return b - a;}) + "<br>");
 document.write("<hr>");
 

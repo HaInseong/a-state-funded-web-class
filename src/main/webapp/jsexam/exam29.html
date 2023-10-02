@@ -7,9 +7,10 @@
 <body>
 <script src="util.js"></script>
 <script>
-Date.prototype.getKorDay = function() {	 //메서드 추가, 이 자바스크립트 엔진이 기동됐을 때만 사용가능한 메서드이다. 다른 html에서는 사용못한다.
+Date.prototype.getKorDay = function() {	 
+	//메서드 추가, 이 자바스크립트 엔진이 기동됐을 때만 사용가능한 메서드이다. 다른 html에서는 사용못한다.
 	//자바스크립트는 객체 생성 후에도 언제든지 멤버 추가 가능하다.
-	var result=null;
+	var result = null;
 	switch(this.getDay()){
 	case 0 : result = "일요일";
 			 break;
@@ -32,8 +33,9 @@ let d = new Date();
 write(d.toLocaleDateString(), 'h1');
 write(d.toLocaleTimeString(), 'h2');
 write(d.getKorDay(), 'h3'); // 요일 날짜 메서드
-// 본인 생일
+
 hr()
+// 본인 생일
 d = new Date(1991, 0, 19);
 write(d.toLocaleDateString(), 'h1');
 write(d.toLocaleTimeString(), 'h2');

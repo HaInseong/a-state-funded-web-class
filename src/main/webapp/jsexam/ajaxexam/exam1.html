@@ -11,7 +11,7 @@
 	<a href="/edu/first.html">하이퍼링크로요청</a>
 	<hr>
 	<button
-		onclick="location.href='/edu/first.html';">버튼을클릭하여요청</button> l<!-- 자바스크립트로 요청하는 방법 ocation.href=".." -->
+		onclick="location.href='/edu/first.html';">버튼을클릭하여요청</button><!-- 자바스크립트로 요청하는 방법 ocation.href=".." -->
 	<hr>
 	<button onclick="requestAjax();">버튼을클릭하여요청(AJAX사용)</button>
 	<hr>
@@ -19,7 +19,7 @@
 	<script>
 		function requestAjax() {
 			const xhr = new XMLHttpRequest();
-			xhr.onload = function () {                // onreadystatechange = 함수 
+			xhr.onload = function () { // onreadystatechange = 함수 
 			//onload 이벤트 핸들러 등록 = ajax통신이 끝나고 응답이 오면 자동으로 호출됨.
 				const result = document.getElementById("result");
 				result.innerHTML += xhr.responseText + "<hr>";				
