@@ -13,6 +13,7 @@
 전달된 메시지의 내용은 ${param.message} 입니다.<br>
 전달된 메시지의 내용은 ${param["message"]} 입니다.<br>
 <hr>
-전달된 메시지의 내용은 <%= request.getParameter("message") %> 입니다.<br>
+전달된 메시지의 내용은 <%= request.getParameter("message") %> 입니다.<br> <!-- JSP 표현식 태그 -->
+전달된 메시지의 내용은 <% out.print(request.getParameter("message")); %> 입니다.<br> <!-- JSP 수행문 태그 -->
 </body>
 </html>

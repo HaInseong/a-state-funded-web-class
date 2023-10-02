@@ -20,7 +20,7 @@
  	<hr>
 <%
 	for (int i=1;i<=9;i++){
-		out.print(dan + " x " + i + " = "  + dan*i + "<br>");	
+		out.print(dan + " x " + i + " = "  + dan*i + "<br>");	// 16줄처럼 꼭 표현식 쓰지 않고 내장객체 사용해서 직접 프린트하는게 더 편함
 	}
  } else {
 %>

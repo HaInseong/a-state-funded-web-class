@@ -10,6 +10,7 @@
 <h3>include 액션태그 예제</h3>
 <h4>각 나라의 감사 인사말입니다.</h4>
 <p>
+<!-- 포워드는 페이지 이동 후 종료이지만 인클루드는 페이지 이동 후 다시 돌아온다. -->
 한국어 : 
 <jsp:include page="greeting.jsp">
    <jsp:param name="country" value="korea" />

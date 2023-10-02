@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+
+<body>
+	<h1>AJAX 통신 테스트</h1>
+	<a href="/edu/first.html">하이퍼링크로요청</a>
+	<hr>
+	<button
+		onclick="location.href='/edu/first.html';">버튼을클릭하여요청</button> l<!-- 자바스크립트로 요청하는 방법 ocation.href=".." -->
+	<hr>
+	<button onclick="requestAjax();">버튼을클릭하여요청(AJAX사용)</button>
+	<hr>
+	<div id="result"></div>
+	<script>
+		function requestAjax() {
+			const xhr = new XMLHttpRequest();
+			xhr.onload = function () {                // onreadystatechange = 함수 
+			//onload 이벤트 핸들러 등록 = ajax통신이 끝나고 응답이 오면 자동으로 호출됨.
+				const result = document.getElementById("result");
+				result.innerHTML += xhr.responseText + "<hr>";				
+			}
+			xhr.open("GET", "/edu/first.html", true);  // GET, POST, HEAD, PUT, DELETE //마지막 true는 비동기 요청할 것이라는 의미-디폴트라 없어도 됨
+			xhr.send(); //반드시 마지막에 send까지 요청해야한다.
+		}
+	</script>
+</body>
+
+</html>
